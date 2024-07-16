@@ -1,0 +1,13 @@
+# Используем официальный образ .NET 6.0 в качестве базового
+FROM mcr.microsoft.com/dotnet/runtime:6.0
+
+
+# Устанавливаем рабочую директорию внутри контейнера
+WORKDIR /app
+RUN mkdir "/app/var"
+
+# Копируем собранное приложение в контейнер
+COPY /bin/Release/net6.0/publish/ .
+
+# Запускаем приложение при старте контейнера
+ENTRYPOINT ["dotnet", "3_Farahov_CHW_3_3.dll"]
