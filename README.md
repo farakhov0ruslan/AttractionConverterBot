@@ -1,0 +1,2 @@
+# AttractionconverterBot
+CSV-JSON-AttractionconverterBot
